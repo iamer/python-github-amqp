@@ -27,7 +27,7 @@ class Listener():
 
         self.connection = BrokerConnection(hostname=hostname, 
                                            userid=userid, password=password, 
-                                           virtual_host=virtual_host, port=443,
+                                           virtual_host=virtual_host, port=port,
                                            insist=False, ssl=False)
         self.channel = self.connection.channel()
         self.exchange = Exchange(name=self.name, type="topic", durable=True,
